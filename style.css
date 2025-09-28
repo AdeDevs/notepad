@@ -95,6 +95,17 @@
 .form input:hover::placeholder {
     color: var(--mainColor);
 }
+.form a {
+    font-weight: 600;
+    color: orangered;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0px;
+    transition: all .2s ease-in-out;
+}
+.form a:hover {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
 
 .form button {
     cursor: pointer;
