@@ -7,9 +7,7 @@ form.addEventListener("submit", preventDefault)
 
 function preventDefault(e) {
     e.preventDefault()
-    if (password.value === "password") {
         const value = username.value
-        message.textContent = `Hello ${value}`
-    }
+        alert(`Hello ${value}`)
     console.log(password.value)
 }
