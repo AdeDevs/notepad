@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --mainColor: #12121a;
+    --mainFont: "Montserrat", sans-serif;
+}
+
+.parent {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.forms {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-family: var(--mainFont);
+    position: relative;
+    text-align: center;
+}
+
+.form {
+    overflow-y: auto;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    scrollbar-width: 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.forms .bg {
+    background-image: url(./bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 40vw;
+}
+
+.form .form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: fit-content;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+    scrollbar-width: 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.form h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.form input,
+.form button {
+    font-family: var(--mainFont);
+    padding: 15px 10px;
+    font-weight: 500;
+    box-sizing: border-box;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 2px solid #8080807f;
+    transition: all .3s ease-in-out;
+}
+
+.form input:hover,
+.form input:focus,
+.form button:hover {
+    border-color: var(--mainColor);
+}
+
+.form input::placeholder {
+    font-weight: 400;
+}
+
+.form input:hover::placeholder {
+    color: var(--mainColor);
+}
+
+.form button {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.form button:hover {
+    background-color: var(--mainColor);
+    color: #fff;
+}
+
+
+@media screen and (max-width: 750px) {
+    .forms {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .forms .bg {
+        grid-row: 1;
+        grid-column: 1/2;
+        width: 100%;
+    }
+
+    .form {
+        grid-row: 1;
+        grid-column: 1/2;
+        background-color: #9393933d;
+        backdrop-filter: blur(10px);
+        background-position: center;
+    }
+
+    .form h1, p {
+        color: #fff;
+    }
+
+    .form input,
+    .form button {
+        background-color: #ffffffc8;
+        border: 2px solid #ffffff;
+    }
+    .form input:hover,
+    .form input:focus {
+        background-color: #fff;
+    }
+    .form button:hover {
+        border-color: #fff;
+    }
+}
